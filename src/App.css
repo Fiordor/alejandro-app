@@ -138,14 +138,14 @@ box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.4);
 
   .navbar {
       position: fixed;
-      top: -100%;
-      left: 50%;
+      top: 0;
+      left: -100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       justify-items: center;
-      width: 0%;
-      height: 0%;
+      width: 100%;
+      height: 100%;
       background-color: var(--black);
       z-index: 5;
       transition: 0.6s;
@@ -179,6 +179,26 @@ box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.4);
       justify-content: center;
       justify-items: center;    
   }    
+}
 
+.all-content {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.all-content-div {
+  width: 1000px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+@media (max-width: 800px) {
+  .all-content-div {
+    width: 100%;
+    box-shadow: none;
+  }
 }

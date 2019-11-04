@@ -13,6 +13,19 @@ class AppBibliografia extends Component {
 
 
   componentDidMount() {
+
+    const className = '.proyectos .column-content .row-content .column-content';
+    const duration = '1000';
+    addAOSAttr(className + ':eq(0)', 'fade-down', duration, '0');
+
+    function addAOSAttr(tag, type, duration, delay) {
+      $(tag).attr('data-aos', type);
+      $(tag).attr('data-aos-duration', duration);
+      $(tag).attr('data-aos-delay', delay);
+    }
+    
+    const data = require('./proyectos.json');
+    console.log(data);
   }
 
   render() {

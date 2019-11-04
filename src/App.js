@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 import $ from 'jquery';
 import AppInicio from './app-inicio/AppInicio'
-import AppBibliografia from './app-bibliorafia/AppBibliografia';
+import AppBibliografia from './app-bibliografia/AppBibliografia';
 import AppProyectos from './app-proyectos/AppProyectos';
+import AppAptitudes from './app-aptitudes/AppAptitudes';
+import AppContacto from './app-contacto/AppContacto';
 
 class App extends Component {
 
@@ -18,7 +20,7 @@ class App extends Component {
     $('.navbar-contacto').click(hideNavbar);
 
     function showNavbar() {
-      $('.navbar').css({ top: '0%', left: '0%', width: '100%', height: '100%', borderRadius: '0%' });
+      $('.navbar').css({ left: '0%' });
 
       $('.navbar-li').css({ opacity: '1', transition: '2s' });
 
@@ -31,7 +33,7 @@ class App extends Component {
 
     function hideNavbar() {
       if (window.innerWidth < 800) {
-        $('.navbar').css({ top: '-100%', left: '50%', width: '0%', height: '0%', borderRadius: '100%' });
+        $('.navbar').css({ left: '-100%' });
 
         $('.navbar-li').css({ opacity: '0', transition: '0.2s' });
 
@@ -59,9 +61,17 @@ class App extends Component {
             <div class="navbar-li navbar-contacto hvr-bounce-to-bottom"><a href="#contacto">contacto</a></div>
           </div>
         </div>
-        <AppInicio />
-        <AppBibliografia />
-        <AppProyectos />
+        <div className="all-content">
+          <AppInicio />
+          <div className="all-content-div">
+
+            <AppBibliografia />
+            <AppProyectos />
+            <AppAptitudes />
+          </div>
+          <AppContacto />
+        </div>
+
       </div>
     );
   }
