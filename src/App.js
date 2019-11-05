@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import $ from 'jquery';
+
 import AppInicio from './app-inicio/AppInicio'
 import AppBibliografia from './app-bibliografia/AppBibliografia';
 import AppProyectos from './app-proyectos/AppProyectos';
@@ -19,6 +20,9 @@ class App extends Component {
     $('.navbar-aptitudes').click(hideNavbar);
     $('.navbar-contacto').click(hideNavbar);
 
+    $('.navbar-resposive img:eq(0)').show();
+    $('.navbar-resposive img:eq(1)').hide();
+
     function showNavbar() {
       $('.navbar').css({ left: '0%' });
 
@@ -26,7 +30,11 @@ class App extends Component {
 
       $('.lSAction a').hide('fast');
 
-      $('.navbar-resposive img').attr('src', './img/close.svg');
+      //$('.navbar-resposive img').attr('src', './img/app-close.svg');
+      $('.navbar-resposive img:eq(0)').hide();
+      $('.navbar-resposive img:eq(1)').show();
+
+
       $('.navbar-resposive').off();
       $('.navbar-resposive').click(hideNavbar);
     }
@@ -39,7 +47,10 @@ class App extends Component {
 
         $('.lSAction a').show('fast');
 
-        $('.navbar-resposive img').attr('src', './img/menu.svg');
+        //$('.navbar-resposive img').attr('src', '../img/app-menu.svg');
+        $('.navbar-resposive img:eq(0)').show();
+        $('.navbar-resposive img:eq(1)').hide();
+
         $('.navbar-resposive').off();
         $('.navbar-resposive').click(showNavbar);
       }
@@ -47,11 +58,23 @@ class App extends Component {
   }
 
   render() {
+
+    const app_close = require('./img/app-close.svg');
+    const app_menu = require('./img/app-menu.svg');
+    const app_up = require('./img/app-up.svg');
+
     return (
 
       <div className="app-navbar">
-        <div class="up"><a href="#inicio"><img src="./img/up.svg" alt=""></img></a></div>
-        <div class="navbar-resposive"><img src="./img/menu.svg" alt=""></img></div>
+        <div class="up">
+          <a href="#inicio">
+            <img src={app_up} alt=""></img>
+          </a>
+        </div>
+        <div class="navbar-resposive">
+          <img src={app_menu} alt=""></img>
+          <img src={app_close} alt=""></img>
+        </div>
         <div class="navbar">
           <div class="navbar-ul">
             <div class="navbar-li navbar-formacion hvr-bounce-to-bottom"><a href="#inicio">Inicio</a></div>

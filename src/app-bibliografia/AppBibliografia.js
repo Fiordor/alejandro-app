@@ -67,6 +67,8 @@ class AppBibliografia extends Component {
 
   render() {
     AOS.init();
+
+    const bibliografia_universidad = require('../img/bibliografia-universidad.png');
     return (
       <div className="bibliografia" id="bibliografia">
         <div className="column-content">
@@ -81,7 +83,7 @@ class AppBibliografia extends Component {
           <div className="row-content">
             <div className="column-content">
               <div className="img">
-                <img src="./img/universidad.png"></img>
+                <img src={bibliografia_universidad}></img>
               </div>
             </div>
             <div className="column-content universidad">

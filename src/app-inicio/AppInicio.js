@@ -60,6 +60,8 @@ class AppInicio extends Component {
 
   render() {
     AOS.init();
+
+    const inicio_alejandro = require('../img/inicio-alejandro.png');
     return (
       <div className="inicio" id="inicio">
         <div className="row-content">
@@ -73,7 +75,7 @@ class AppInicio extends Component {
           <div className="column-content">
             <div className="content-img">
               <div className="img">
-                <img src="./img/ale.png"></img>
+                <img src={inicio_alejandro}></img>
               </div>
             </div>
           </div>

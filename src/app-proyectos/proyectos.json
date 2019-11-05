@@ -1,5 +1,5 @@
 {
-    "obras": [
+    "cubiertas": [
         {
             "empresa": "Pafer SL",
             "cargo": "Técnico, Comercial, Jefe de Obra",
@@ -15,6 +15,63 @@
             "lugar": "Buenos Aires, Argentina",
             "objetivo": "",
             "texto": " En todas estos proyectos las tareas que he desarrollado dentro de un interdisiplinario equipo son las siguientes: supervisión de la implementación de equipos logísticos (sistemas de transportes, estantería convencional, sistemas de picking, almacén automático autoportante, transelevadores), seguimiento de la inversión de proyectos y obras, seguimiento de la implementación, confección de pliegos de contratación, planificación de las tareas, supervisión de la ejecución de la obra civil, gestión de contratación. Análisis de datos para el dimensionado de almacenes (stock, producción, etc). Relevamiento de datos logísticos, flujos, infraestructuras, etc para su análisis. Trato con proveedores locales y extranjeros. Seguimiento de la puesta en marcha de las instalaciones de obra civil, equipamiento logístico e informática, coordinación de reuniones de seguimiento, etc. También he realizado proyectos de Masterplan de parques industriales. "
+        }
+    ],
+    "fachadas": [
+        {
+            "short": ["Polideportivo", "Pedreguer"],
+            "titulo": "Polideportivo - Pedreguer, Alicante",
+            "imagenes": []
+        },
+        {
+            "short": ["Hospital", "S. Juan de Dios"],
+            "titulo": "Hospital S. Juan de Dios - P. de Mallorca",
+            "imagenes": []
+        },
+        {
+            "short": ["C. Logístico", "Frival"],
+            "titulo": "C. Logístico Frival - Valencia",
+            "imagenes": []
+        },
+        {
+            "short": ["Edificio", "Red Eléctrica Eliana"],
+            "titulo": "Edificio Red Eléctrica Eliana - Valencia",
+            "imagenes": []
+        },
+        {
+            "short": ["Mando Ciberdefensa", "Cuartel Retamares"],
+            "titulo": "Mando Conjunto de Ciberdefensa - Cuartel Retamares - Madrid",
+            "imagenes": []
+        },
+        {
+            "short": ["Concesionario", "BMW Maberauto"],
+            "titulo": "Concesionario BMW Maberauto - Castellón",
+            "imagenes": []
+        },
+        {
+            "short": ["Concesionario", "BMW Bertolin"],
+            "titulo": "Concesionario BMW - Bertolin - Valencia",
+            "imagenes": []
+        },
+        {
+            "short": ["Concesionario", "BMW Engasa"],
+            "titulo": "Concesionario BMW Engasa - Valencia",
+            "imagenes": []
+        },
+        {
+            "short": ["Concesionario", "VW/Audi Marza"],
+            "titulo": "Concesionario VW/Audi Marza - Castellón",
+            "imagenes": []
+        },
+        {
+            "short": ["Concesionario", "VW Levante Wagen"],
+            "titulo": "Concesionario VW Levante Wagen - Valencia",
+            "imagenes": []
+        },
+        {
+            "short": ["Oficinas", "Karbest"],
+            "titulo": "Oficinas Karbest - Paiporta",
+            "imagenes": []
         }
     ]
 }

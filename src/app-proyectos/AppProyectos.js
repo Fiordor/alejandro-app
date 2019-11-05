@@ -4,13 +4,11 @@ import $ from 'jquery';
 import '../../node_modules/aos/dist/aos.css'
 import AOS from 'aos';
 
+import { Route, Link } from 'react-router-dom';
+
+import Obra from './AppObra';
+
 class AppBibliografia extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
 
   componentDidMount() {
 
@@ -23,33 +21,73 @@ class AppBibliografia extends Component {
       $(tag).attr('data-aos-duration', duration);
       $(tag).attr('data-aos-delay', delay);
     }
-    
-    const data = require('./proyectos.json');
-    console.log(data);
   }
 
   render() {
     AOS.init();
 
-    function addProject(n) {
+    function addProjectv1(fachadas) {
       return (
         //<div className="container">
-          <a className="container-a" href="#">
-            <img src="./aaaa"></img>
-            <div className="container-line">
-              <div className="container-text">{'holas' + n}</div>
+        <a className="container-a" href="">
+          <img src="./aaaa"></img>
+          <div className="container-line">
+            <div className="container-text">
+              {
+                /*
+                short.map((element, i) =>
+                  <div key={'fachada-' + i}>
+                    {element}
+                  </div>)
+                */
+                fachadas.short.map((element, i) =>
+                  <div key={'fachada-' + i}>
+                    <Link to={"/" + element}> {element} </Link>
+                    <Route path={"/" + element} component={Obra}></Route>
+                  </div>)
+              }
             </div>
-          </a>
+          </div>
+        </a>
         //</div>
       );
     }
 
-    function loopIt(n) {
-      const array = new Array(n);
-      for (var i = 0; i < n; i++) { array[i] = addProject(i); }
+    function addProject(fachadas) {
+      return (
+
+        <Link
+          className="container-a"
+          to={{
+            pathname: "/" + fachadas.short.map(function(element) { return element; }),
+            passObra: fachadas
+          }}
+        >
+          <img src="./aaa"></img>
+          <div className="container-line">
+            <div className="container-text">
+              {
+                fachadas.short.map((element, i) =>
+                  <div key={'fachada-' + i}>
+                    {element}
+                  </div>)
+              }
+            </div>
+          </div>
+          <Route path={"/" + fachadas.short.map(function(element) { return element; })} component={Obra}></Route>
+        </Link>
+      );
+    }
+
+    function loopIt() {
+
+      const data = require('./proyectos.json');
+      const fachadas = data.fachadas;
+      console.log(fachadas.length);
+      for (var i = 0; i < fachadas.length; i++) { fachadas[i] = addProject(fachadas[i]); }
       return (
         <div className="row-content">
-          {array.map(element => <div className="container">{element}</div>)}
+          {fachadas.map(element => <div className="container">{element}</div>)}
         </div>
       );
     }
@@ -57,7 +95,9 @@ class AppBibliografia extends Component {
     return (
       <div className="proyectos" id="proyectos">
         <div className="column-content">
-
+          <Link to="/"> HOME </Link>
+          <Link to="/obra"> Obra </Link>
+          <Route path="/obra" component={Obra}></Route>
           <div className="row-content">
             <div className="column-content">
               <div className="title">Proyectos</div>
@@ -74,7 +114,7 @@ class AppBibliografia extends Component {
               <div className="column-content title-row">
                 <div className="title">Cubiertas</div>
               </div>
-              {loopIt(5)}              
+              {/*loopIt(5)*/}
               {/*
               <div className="row-content">
                 <div className="container">
