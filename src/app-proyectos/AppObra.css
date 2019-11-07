@@ -1,0 +1,169 @@
+:root {
+    --light-grey: #484848;
+    --white: #dddddd;
+    --black: #222222;
+    --purple: #311a91;
+}
+
+.obra {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, .9);
+    transition: 0.6s;
+}
+
+.obra .container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+}
+
+.obra .button-close {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--purple);
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    transition: 0.4s;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+}
+
+.obra .button-close:hover {
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(255,255,255,0.75);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(255,255,255,0.75);
+    box-shadow: 0px 0px 10px 5px rgba(255,255,255,0.75);
+}
+
+.obra .button-close .button-close-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.obra .button-close .button-close-a img { width: 32px; height: 32px; }
+
+.obra .container .container-column-margin {
+    width: 48px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.obra .container .container-column-margin .button-slider {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.obra .container .container-column-margin .button-slider 
+    img { width: 32px; height: 32px; transition: 0.4s; cursor: pointer; }
+
+.obra .container .container-column-margin .button-slider 
+    .left { transform: rotate(90deg); }
+
+.obra .container .container-column-margin .button-slider 
+    .right { transform: rotate(-90deg); }
+
+.obra .container .container-column-margin .button-slider 
+    .left:hover { transform: rotate(90deg) scale(1.2); }
+
+.obra .container .container-column-margin .button-slider 
+    .right:hover { transform: rotate(-90deg) scale(1.2); }
+
+.obra .container .container-column { width: 100%; height: 100%; }
+
+.obra .container .container-column .container-text {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.obra .container .container-column .container-text .text
+    { font-size: 18px; text-align: left; }
+
+.obra .container .container-column .container-first-img {
+    width: 100%;
+    height: 70%;
+    background-color: #000;
+    position: relative;
+}
+
+.obra .container .container-column .container-first-img div {
+    width: 100%;
+    height: 100%;
+}
+
+.obra .container .container-column .container-first-img img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.obra .container .container-column .container-second-img {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+}
+
+.obra .container .container-column .container-second-img img {
+    width: 60px;
+    height: 40px;
+    margin: 2px;
+    transition: 0.4s;
+    border: 1px solid var(--black);
+}
+
+.obra .container .container-column .container-second-img 
+    img:hover { border-radius: 8px; cursor: pointer; }
+
+@media (max-width: 800px) {
+    .obra .container { width: 95%; height: 95%; }
+
+    .obra .button-close { width: 48px; height: 48px; }
+
+    .obra .button-close .button-close-a img { width: 24px; height: 24px; }
+
+    .obra .container .container-column-margin { width: 24px; }
+
+    .obra .container .container-column-margin .button-slider { width: 16px; height: 16px; }
+
+    .obra .container .container-column-margin .button-slider img { width: 16px; height: 16px; }
+
+    .obra .container .container-column .container-text { height: 24px; }
+
+    .obra .container .container-column .container-text .text { font-size: 16px; }
+
+    .obra .container .container-column .container-second-img img { width: 40px; height: 30px; }
+
+}    

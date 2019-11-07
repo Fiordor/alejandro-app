@@ -152,7 +152,6 @@ class AppAptitudes extends Component {
     }
 
     const data = require('./aptitudes.json');
-    console.log(data);
 
   }
 

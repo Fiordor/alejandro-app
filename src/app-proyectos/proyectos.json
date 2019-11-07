@@ -41,7 +41,7 @@
         {
             "short": ["Mando Ciberdefensa", "Cuartel Retamares"],
             "titulo": "Mando Conjunto de Ciberdefensa - Cuartel Retamares - Madrid",
-            "imagenes": []
+            "imagenes": ["cuartel-retamares-", "5", ".jpg"]
         },
         {
             "short": ["Concesionario", "BMW Maberauto"],

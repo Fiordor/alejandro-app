@@ -26,68 +26,53 @@ class AppBibliografia extends Component {
   render() {
     AOS.init();
 
-    function addProjectv1(fachadas) {
-      return (
-        //<div className="container">
-        <a className="container-a" href="">
-          <img src="./aaaa"></img>
-          <div className="container-line">
-            <div className="container-text">
-              {
-                /*
-                short.map((element, i) =>
-                  <div key={'fachada-' + i}>
-                    {element}
-                  </div>)
-                */
-                fachadas.short.map((element, i) =>
-                  <div key={'fachada-' + i}>
-                    <Link to={"/" + element}> {element} </Link>
-                    <Route path={"/" + element} component={Obra}></Route>
-                  </div>)
-              }
-            </div>
-          </div>
-        </a>
-        //</div>
-      );
-    }
+    const fachadas = require('./proyectos.json').fachadas;
+    const cubiertas = require('./proyectos.json').cubiertas;
 
-    function addProject(fachadas) {
+    function createObraLink(obra) {
       return (
 
         <Link
           className="container-a"
           to={{
-            pathname: "/" + fachadas.short.map(function(element) { return element; }),
-            passObra: fachadas
+            pathname: "/" + obra.short.map(function (element) { return element; }),
+            passObra: obra
           }}
         >
           <img src="./aaa"></img>
           <div className="container-line">
             <div className="container-text">
-              {
-                fachadas.short.map((element, i) =>
-                  <div key={'fachada-' + i}>
-                    {element}
-                  </div>)
-              }
+              {obra.short.map((element, i) => <div key={'fachada-' + i}>{element}</div>)}
             </div>
           </div>
-          <Route path={"/" + fachadas.short.map(function(element) { return element; })} component={Obra}></Route>
         </Link>
       );
     }
 
-    function loopIt() {
+    function createObraRoute(data) {
+      return (
+        <Route path={"/" + data.short.map(function (element) { return element; })} component={Obra}></Route>
+      );
+    }
 
-      const data = require('./proyectos.json');
-      const fachadas = data.fachadas;
-      console.log(fachadas.length);
-      for (var i = 0; i < fachadas.length; i++) { fachadas[i] = addProject(fachadas[i]); }
+    function addObrasRoute(data) {
+
+      var obras = new Array(data.length);
+      for (var i = 0; i < obras.length; i++) { obras[i] = createObraRoute(data[i]); }
       return (
         <div className="row-content">
-          {fachadas.map(element => <div className="container">{element}</div>)}
+          {obras.map(element => <div className="container-obra">{element}</div>)}
+        </div>        
+      );
+    }
+
+    function addObrasLink(data) {
+
+      var obras = new Array(data.length);
+      for (var i = 0; i < obras.length; i++) { obras[i] = createObraLink(data[i]); }
+      return (
+        <div className="row-content">
+          {obras.map(element => <div className="container">{element}</div>)}
         </div>
       );
     }
@@ -95,9 +80,7 @@ class AppBibliografia extends Component {
     return (
       <div className="proyectos" id="proyectos">
         <div className="column-content">
-          <Link to="/"> HOME </Link>
-          <Link to="/obra"> Obra </Link>
-          <Route path="/obra" component={Obra}></Route>
+
           <div className="row-content">
             <div className="column-content">
               <div className="title">Proyectos</div>
@@ -110,7 +93,8 @@ class AppBibliografia extends Component {
               <div className="column-content title-row">
                 <div className="title">Fachadas</div>
               </div>
-              {loopIt(5)}
+              {addObrasLink(fachadas)}
+              {addObrasRoute(fachadas)}
               <div className="column-content title-row">
                 <div className="title">Cubiertas</div>
               </div>
