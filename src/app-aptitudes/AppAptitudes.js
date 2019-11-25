@@ -3,7 +3,6 @@ import './AppAptitudes.css';
 import $ from 'jquery';
 import '../../node_modules/aos/dist/aos.css'
 import AOS from 'aos';
-import firebaseAcces from '../firebaseAcces';
 
 class AppAptitudes extends Component {
 
@@ -18,28 +17,13 @@ class AppAptitudes extends Component {
 
   readData = () => {
 
-    const db = firebaseAcces.firestore();
+    const data = require('./aptitudes.json');
 
-    let aptitudesCursosRef = db.collection('aptitudes').doc('cursos-db');
-    let getCursosDoc = aptitudesCursosRef.get().then(doc => {
-      if (!doc.exists) { console.log('No such document!'); }
-      else {
-        doc.data().cursos.forEach(element => { this.arrayCursos.push(element); });
-      }
-    }).catch(err => { console.log('Error getting document', err); });
-
-
-    let aptitudesRef = db.collection('aptitudes').doc('aptitudes-db');
-    let getDoc = aptitudesRef.get().then(doc => {
-      if (!doc.exists) { console.log('No such document!'); }
-      else {
-        doc.data().destacados.forEach(element => { this.arrayDestacados.push(element); });
-        doc.data().idiomas.forEach(element => { this.arrayIdiomas.push(element); });
-        doc.data().conocimientos.forEach(element => { this.arrayConocimientos.push(element); });
-        doc.data().herramientas.forEach(element => { this.arrayHerramientas.push(element); });
-        doc.data().interpersonales.forEach(element => { this.arrayInterpersonales.push(element); });
-      }
-    }).catch(err => { console.log('Error getting document', err); });
+    data.especialidades.forEach(element => { this.arrayDestacados.push(element); });
+    data.idiomas.forEach(element => { this.arrayIdiomas.push(element); });
+    data.conocimientos.forEach(element => { this.arrayConocimientos.push(element); });
+    data.herramientas.forEach(element => { this.arrayHerramientas.push(element); });
+    data.interpersonal.forEach(element => { this.arrayInterpersonales.push(element); });
 
   }
 
@@ -150,9 +134,6 @@ class AppAptitudes extends Component {
       };
       return out
     }
-
-    const data = require('./aptitudes.json');
-
   }
 
   render() {
@@ -197,9 +178,6 @@ class AppAptitudes extends Component {
               <div className="row-content">
                 <div className="column-content list">
                   <ul>
-                    <li>Arquitectura</li>
-                    <li>Arquitectura</li>
-                    <li>Arquitectura</li>
                   </ul>
                 </div>
               </div>

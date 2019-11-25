@@ -1,7 +1,34 @@
 {
-    "especialidades": ["AutoCAD", "Microsoft Office", "Construcción"],
-    "idiomas": ["Castellano", "Inglés", "Portugués"],
-    "conocimientos": "",
-    "herramientas": "",
-    "interpersonal": ""
+    "especialidades": [
+        "AutoCAD",
+        "Microsoft Office", 
+        "Construcción"],
+    "idiomas": [
+        "Castellano",
+        "Inglés",
+        "Portugués"],
+    "conocimientos": [
+        "Arquitectura",
+        "Construcción",
+        "Gestión de contratos",
+        "Gestión de obras de construcción",
+        "Gestión de proyectos",
+        "Planeamiento de proyectos",
+        "Ingeniería",
+        "Planeamiento de proyectos",
+        "Planificación",
+        "Seguridad"],
+    "herramientas": [
+        "CorelDraw",
+        "Microsoft Excel",
+        "Microsoft Proyect",
+        "Microsoft Word",
+        "Photoshop",
+        "Visio technical"],
+    "interpersonal": [
+        "Dirección",
+        "Liderazgo de equipos",
+        "Negociación",
+        "Negociación de contratos",
+        "Responsabilidad"]
 }

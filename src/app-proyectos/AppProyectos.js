@@ -30,6 +30,9 @@ class AppBibliografia extends Component {
     const cubiertas = require('./proyectos.json').cubiertas;
 
     function createObraLink(obra) {
+
+      //const img = require('./img-obras/' + obra.imagenes[0] + '0' + obra.imagenes[2]);
+
       return (
 
         <Link

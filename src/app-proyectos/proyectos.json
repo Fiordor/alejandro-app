@@ -26,12 +26,12 @@
         {
             "short": ["Hospital", "S. Juan de Dios"],
             "titulo": "Hospital S. Juan de Dios - P. de Mallorca",
-            "imagenes": []
+            "imagenes": ["palacio-san-juan-de-dios-", "7", ".jpg"]
         },
         {
             "short": ["C. Logístico", "Frival"],
             "titulo": "C. Logístico Frival - Valencia",
-            "imagenes": []
+            "imagenes": ["c-logistico-frival-", "13", ".jpg"]
         },
         {
             "short": ["Edificio", "Red Eléctrica Eliana"],
@@ -66,12 +66,12 @@
         {
             "short": ["Concesionario", "VW Levante Wagen"],
             "titulo": "Concesionario VW Levante Wagen - Valencia",
-            "imagenes": []
+            "imagenes": ["concesionario-vw-levanten-wagen-", "2", ".jpg"]
         },
         {
             "short": ["Oficinas", "Karbest"],
             "titulo": "Oficinas Karbest - Paiporta",
-            "imagenes": []
+            "imagenes": ["oficinas-karbest-", "12", ".jpg"]
         }
     ]
 }

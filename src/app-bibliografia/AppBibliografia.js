@@ -18,6 +18,19 @@ class AppBibliografia extends Component {
   }
 
   readData = () => {
+    /*
+    const data = require('./bibliografia.json');
+
+    this.setState({
+      uniP0_0: data.universidad,
+      uniP0_1: data.facultad,
+      uniP1: data.titulo,
+      uniP2: data.fecha,
+      textoP0_0: data.texto[0],
+      textoP0_1: data.texto[1],
+      textoP0_2: data.texto[2]
+    });
+    */
 
     const db = firebaseAcces.firestore();
 
