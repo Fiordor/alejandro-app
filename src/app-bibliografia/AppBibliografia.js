@@ -3,58 +3,26 @@ import './AppBibliografia.css';
 import $ from 'jquery';
 import '../../node_modules/aos/dist/aos.css'
 import AOS from 'aos';
-import firebaseAcces from '../firebaseAcces';
 
 class AppBibliografia extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      uniP0_0: '', uniP0_1: '',
-      uniP1: '',
-      uniP2: '',
-      textoP0_0: '', textoP0_1: '', textoP0_2: ''
-    };
-  }
+
+  dataUniversidad = "";
+  dataFacultad = "";
+  dataTitulo = "";
+  dataFecha = "";
+  dataTexto = [];
 
   readData = () => {
-    /*
+    
     const data = require('./bibliografia.json');
 
-    this.setState({
-      uniP0_0: data.universidad,
-      uniP0_1: data.facultad,
-      uniP1: data.titulo,
-      uniP2: data.fecha,
-      textoP0_0: data.texto[0],
-      textoP0_1: data.texto[1],
-      textoP0_2: data.texto[2]
-    });
-    */
+    this.dataUniversidad = data.universidad;
+    this.dataFacultad = data.facultad;
+    this.dataTitulo = data.titulo;
+    this.dataFecha = data.fecha;
+    data.texto.forEach(element => { this.dataTexto.push(element); });
 
-    const db = firebaseAcces.firestore();
-
-    let biblioRef = db.collection('bibliografia').doc('bibliografia-db');
-    let getDoc = biblioRef.get()
-      .then(doc => {
-        if (!doc.exists) {
-          console.log('No such document!');
-        } else {
-          //console.log('Document data:', doc.data().texto);
-          this.setState({
-            uniP0_0: doc.data().universidad,
-            uniP0_1: doc.data().facultad,
-            uniP1: doc.data().titulo,
-            uniP2: doc.data().fecha,
-            textoP0_0: doc.data().texto[0],
-            textoP0_1: doc.data().texto[1],
-            textoP0_2: doc.data().texto[2]
-          });
-        }
-      })
-      .catch(err => {
-        console.log('Error getting document', err);
-      });
   }
 
   componentDidMount() {
@@ -71,6 +39,14 @@ class AppBibliografia extends Component {
     addAOSAttr(className + ':eq(3) .p0 p:eq(1)', 'fade-up', duration, '800');
     addAOSAttr(className + ':eq(3) .p0 p:eq(2)', 'fade-up', duration, '1100');
 
+    $(className + ':eq(2) .p0').html(this.dataUniversidad + '<br>' + this.dataFacultad);
+    $(className + ':eq(2) .p1').text(this.dataTitulo);
+    $(className + ':eq(2) .p2').text(this.dataFecha);
+
+    for (let i = 0; i < this.dataTexto.length; i++) {
+      $(className + ':eq(3) .p0 p:eq(' + i + ')').text(this.dataTexto[i]);
+    }
+
     function addAOSAttr(tag, type, duration, delay) {
       $(tag).attr('data-aos', type);
       $(tag).attr('data-aos-duration', duration);
@@ -82,6 +58,7 @@ class AppBibliografia extends Component {
     AOS.init();
 
     const bibliografia_universidad = require('../img/bibliografia-universidad.png');
+
     return (
       <div className="bibliografia" id="bibliografia">
         <div className="column-content">
@@ -100,18 +77,18 @@ class AppBibliografia extends Component {
               </div>
             </div>
             <div className="column-content universidad">
-              <div className="p0">{this.state.uniP0_0}<br></br>{this.state.uniP0_1}</div>
-              <div className="p1">{this.state.uniP1}</div>
-              <div className="p2">{this.state.uniP2}</div>
+              <div className="p0"><br></br></div>
+              <div className="p1"></div>
+              <div className="p2"></div>
             </div>
           </div>
 
           <div className="row-content">
             <div className="column-content texto">
               <div className="p0">
-                <p>{this.state.textoP0_0}</p>
-                <p>{this.state.textoP0_1}</p>
-                <p>{this.state.textoP0_2}</p>
+                <p></p>
+                <p></p>
+                <p></p>
               </div>
             </div>
           </div>

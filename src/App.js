@@ -66,22 +66,22 @@ class App extends Component {
     return (
 
       <div className="app-navbar">
-        <div class="up">
+        <div className="up">
           <a href="#inicio">
             <img src={app_up} alt=""></img>
           </a>
         </div>
-        <div class="navbar-resposive">
+        <div className="navbar-resposive">
           <img src={app_menu} alt=""></img>
           <img src={app_close} alt=""></img>
         </div>
-        <div class="navbar">
-          <div class="navbar-ul">
-            <div class="navbar-li navbar-formacion hvr-bounce-to-bottom"><a href="#inicio">Inicio</a></div>
-            <div class="navbar-li navbar-formacion hvr-bounce-to-bottom"><a href="#bibliografia">Bibliografía</a></div>
-            <div class="navbar-li navbar-proyectos hvr-bounce-to-bottom"><a href="#proyectos">proyectos</a></div>
-            <div class="navbar-li navbar-aptitudes hvr-bounce-to-bottom"><a href="#aptitudes">aptitudes</a></div>
-            <div class="navbar-li navbar-contacto hvr-bounce-to-bottom"><a href="#contacto">contacto</a></div>
+        <div className="navbar">
+          <div className="navbar-ul">
+            <div className="navbar-li navbar-formacion hvr-bounce-to-bottom"><a href="#inicio">Inicio</a></div>
+            <div className="navbar-li navbar-formacion hvr-bounce-to-bottom"><a href="#bibliografia">Bibliografía</a></div>
+            <div className="navbar-li navbar-proyectos hvr-bounce-to-bottom"><a href="#proyectos">proyectos</a></div>
+            <div className="navbar-li navbar-aptitudes hvr-bounce-to-bottom"><a href="#aptitudes">aptitudes</a></div>
+            <div className="navbar-li navbar-contacto hvr-bounce-to-bottom"><a href="#contacto">contacto</a></div>
           </div>
         </div>
         <div className="all-content">

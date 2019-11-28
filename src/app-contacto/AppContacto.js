@@ -3,7 +3,6 @@ import './AppContacto.css';
 import $ from 'jquery';
 import '../../node_modules/aos/dist/aos.css'
 import AOS from 'aos';
-import firebaseAcces from '../firebaseAcces';
 
 class AppContacto extends Component {
 
