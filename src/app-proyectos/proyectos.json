@@ -1,77 +1,156 @@
 {
-    "cubiertas": [
+    "cubiertas":[
         {
-            "empresa": "Pafer SL",
-            "cargo": "Técnico, Comercial, Jefe de Obra",
-            "duracion": "Jun 2003 - Ene 2008 | 4 años y 7 meses",
-            "lugar": "Valencia, España",
-            "objetivo": "",
-            "texto": " Responsable Depto. Técnico/Estudio, presupuestación, medición, control de costos, responsable del seguimiento de obras y coordinación. Diseño y construcción de reformas y obras nuevas. "
+            "short": ["Centro Logistico", "Telefónica"],
+            "titulo": "Centro Logístico Telefónica, Argentina",
+            "imagenes": ["cent-log-telefonica-", "20", ".jpg"]
         },
         {
-            "empresa": "Miebach Logística S.A.",
-            "cargo": "Asistente de Project Management",
-            "duracion": "Nov 1997 - Abr 2002 | 4 años y 6 meses",
-            "lugar": "Buenos Aires, Argentina",
-            "objetivo": "",
-            "texto": " En todas estos proyectos las tareas que he desarrollado dentro de un interdisiplinario equipo son las siguientes: supervisión de la implementación de equipos logísticos (sistemas de transportes, estantería convencional, sistemas de picking, almacén automático autoportante, transelevadores), seguimiento de la inversión de proyectos y obras, seguimiento de la implementación, confección de pliegos de contratación, planificación de las tareas, supervisión de la ejecución de la obra civil, gestión de contratación. Análisis de datos para el dimensionado de almacenes (stock, producción, etc). Relevamiento de datos logísticos, flujos, infraestructuras, etc para su análisis. Trato con proveedores locales y extranjeros. Seguimiento de la puesta en marcha de las instalaciones de obra civil, equipamiento logístico e informática, coordinación de reuniones de seguimiento, etc. También he realizado proyectos de Masterplan de parques industriales. "
-        }
+            "short": ["Centro Logístico", "Terrabusi"],
+            "titulo": "Centro Logístico Terrabusi, Argentina",
+            "imagenes": ["cent-log-terrabusi-", "13", ".jpg"]
+        },
+        {
+            "short": ["Repsol", "YPF"],
+            "titulo": "Repsol YPF, Argentina",
+            "imagenes": ["repsol-ypf-", "12", ".jpg"]
+        },
+        {
+            "short": ["São João", "do Rei"],
+            "titulo": "São João do Rei, Brazil",
+            "imagenes": ["sao-joa-do-rei-", "2", ".jpg"]
+        },
+        {
+            "short": ["Aeropuerto", "Natal"],
+            "titulo": "Aeropuerto Natal, Brazil",
+            "imagenes": ["aeropuerto-natal-", "6", ".jpg"]
+        },
+        {
+            "short": ["Acelerador de ", "Partículas"],
+            "titulo": "Acelerador Partículas - Sirius, Brazil",
+            "imagenes": ["acelerador-particulas-", "29", ".jpg"]
+        },
+        {
+            "short": ["Piscina", "SESI"],
+            "titulo": "Piscina SESI, Brazil",
+            "imagenes": ["piscina-sesi-", "6", ".jpg"]
+        },
+        {
+            "short": ["Aeropuerto", "Castellón"],
+            "titulo": "Aeropuerto Castellón, Castellón",
+            "imagenes": ["aaa-obra-", "1", ".jpg"]
+        },
+        {
+            "short": ["Aeropuerto", "Lavacollas"],
+            "titulo": "Aeropuerto Lavacollas, León",
+            "imagenes": ["aerop-lavacollas-leon-", "38", ".jpg"]
+        },
+        {
+            "short": ["Aeropuerto", "Santiago"],
+            "titulo": "Aeropuerto Santiago, Santiago de Compostela",
+            "imagenes": ["aerop-santiago-", "15", ".jpg"]
+        },
+        {
+            "short": ["Carcel de", "Tarragona"],
+            "titulo": "Carcel de Tarragona, Tarragona",
+            "imagenes": ["carcel-tarragona-", "21", ".jpg"]
+        },        
+        {
+            "short": ["Aeropuerto", "Manises"],
+            "titulo": "Aeropuerto Manises, Valencia",
+            "imagenes": ["aerop-manises-", "6", ".jpg"]
+        },
+        {
+            "short": ["IES", "Xirevella"],
+            "titulo": "IES Xirevella, Valencia",
+            "imagenes": ["ies-xirivella-", "4", ".jpg"]
+        },
+        {
+            "short": ["Polideportivo", "Vallada"],
+            "titulo": "Polideportivo Vallada, Alicante",
+            "imagenes": ["polideportivo-vallada-", "3", ".jpg"]
+        },
+        {
+            "short": ["Polideportivo", "Villajoiosa"],
+            "titulo": "Polideportivo Villajoiosa, Vallada",
+            "imagenes": ["polideportivo-villajoiosa-", "4", ".jpg"]
+        }        
     ],
     "fachadas": [
         {
+            "short": ["Shopping", "Grao Para"],
+            "titulo": "Shopping Grao Para, Brazil",
+            "imagenes": ["grao-para-", "13", ".jpg"]
+        },
+        {
             "short": ["Polideportivo", "Pedreguer"],
             "titulo": "Polideportivo - Pedreguer, Alicante",
-            "imagenes": []
+            "imagenes": ["aaa-obra-", "1", ".jpg"]
         },
         {
             "short": ["Hospital", "S. Juan de Dios"],
-            "titulo": "Hospital S. Juan de Dios - P. de Mallorca",
+            "titulo": "Hospital S. Juan de Dios, Palma de Mallorca",
             "imagenes": ["palacio-san-juan-de-dios-", "7", ".jpg"]
         },
         {
             "short": ["C. Logístico", "Frival"],
-            "titulo": "C. Logístico Frival - Valencia",
+            "titulo": "C. Logístico Frival, Valencia",
             "imagenes": ["c-logistico-frival-", "13", ".jpg"]
         },
         {
             "short": ["Edificio", "Red Eléctrica Eliana"],
-            "titulo": "Edificio Red Eléctrica Eliana - Valencia",
-            "imagenes": []
+            "titulo": "Edificio Red Eléctrica Eliana, Valencia",
+            "imagenes": ["red-electrica-", "8", ".jpg"]
         },
         {
             "short": ["Mando Ciberdefensa", "Cuartel Retamares"],
-            "titulo": "Mando Conjunto de Ciberdefensa - Cuartel Retamares - Madrid",
+            "titulo": "Mando Conjunto de Ciberdefensa - Cuartel Retamares, Madrid",
             "imagenes": ["cuartel-retamares-", "5", ".jpg"]
         },
         {
             "short": ["Concesionario", "BMW Maberauto"],
-            "titulo": "Concesionario BMW Maberauto - Castellón",
-            "imagenes": []
+            "titulo": "Concesionario BMW Maberauto, Castellón",
+            "imagenes": ["bmw-maberauto-", "8", ".jpg"]
         },
         {
             "short": ["Concesionario", "BMW Bertolin"],
-            "titulo": "Concesionario BMW - Bertolin - Valencia",
-            "imagenes": []
+            "titulo": "Concesionario BMW - Bertolin, Valencia",
+            "imagenes": ["aaa-obra-", "1", ".jpg"]
         },
         {
             "short": ["Concesionario", "BMW Engasa"],
-            "titulo": "Concesionario BMW Engasa - Valencia",
-            "imagenes": []
+            "titulo": "Concesionario BMW Engasa, Valencia",
+            "imagenes": ["aaa-obra-", "1", ".jpg"]
         },
         {
             "short": ["Concesionario", "VW/Audi Marza"],
-            "titulo": "Concesionario VW/Audi Marza - Castellón",
-            "imagenes": []
+            "titulo": "Concesionario VW/Audi Marza, Castellón",
+            "imagenes": ["aaa-obra-", "1", ".jpg"]
         },
         {
             "short": ["Concesionario", "VW Levante Wagen"],
-            "titulo": "Concesionario VW Levante Wagen - Valencia",
+            "titulo": "Concesionario VW Levante Wagen, Valencia",
             "imagenes": ["concesionario-vw-levanten-wagen-", "2", ".jpg"]
         },
         {
+            "short": ["Concesionario", "BMW Canoturia"],
+            "titulo": "Concesionario BMW Canoturia, Valencia",
+            "imagenes": ["canoturia-BMW-", "2", ".jpg"]
+        },        
+        {
             "short": ["Oficinas", "Karbest"],
-            "titulo": "Oficinas Karbest - Paiporta",
+            "titulo": "Oficinas Karbest - Paiporta, Valencia",
             "imagenes": ["oficinas-karbest-", "12", ".jpg"]
+        },
+        {
+            "short": ["IES Villanueva", "de Gallego"],
+            "titulo": "IES Villanueva de Gallego, Zaragoza",
+            "imagenes": ["ies-villanueva-de-gallego-", "12", ".jpg"]
+        },
+        {
+            "short": ["Piscina municipal", "Castellón"],
+            "titulo": "Piscina municipal, Castellón",
+            "imagenes": ["piscina-municipal-castellon-", "7", ".jpg"]
         }
     ]
 }

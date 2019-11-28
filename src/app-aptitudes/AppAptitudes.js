@@ -139,6 +139,8 @@ class AppAptitudes extends Component {
   render() {
     AOS.init();
 
+    const img = require('../img/obra-arrow-white.svg');
+
     return (
       <div className="aptitudes" id="aptitudes">
         <div className="column-content">
@@ -154,8 +156,8 @@ class AppAptitudes extends Component {
             <div className="column-content">
               <div className="row-content responsive-skill">
                 <div className="select-button">
-                  <div className="text">Option</div>
-                  <div className="img"><img src="./aaa"></img></div>
+                  <div className="text">Aptitud</div>
+                  <div className="img"><img src={img}></img></div>
                 </div>
               </div>
               <div className="row-content skill">
@@ -166,13 +168,13 @@ class AppAptitudes extends Component {
                   <div className="text-content">Idiomas</div>
                 </div>
                 <div className="column-content conocimientos skill-off">
-                  <div className="text-content">Conocimientos</div>
+                  <div className="text-content">?</div>
                 </div>
                 <div className="column-content herramientas skill-off">
-                  <div className="text-content">Herramientas</div>
+                  <div className="text-content">Software</div>
                 </div>
                 <div className="column-content interpersonal skill-off">
-                  <div className="text-content">Interpersonal</div>
+                  <div className="text-content">Aptitudes</div>
                 </div>
               </div>
               <div className="row-content">

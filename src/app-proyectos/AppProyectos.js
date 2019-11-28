@@ -31,7 +31,7 @@ class AppBibliografia extends Component {
 
     function createObraLink(obra) {
 
-      //const img = require('./img-obras/' + obra.imagenes[0] + '0' + obra.imagenes[2]);
+      const img = require('./img-obras/' + obra.imagenes[0] + '0' + obra.imagenes[2]);
 
       return (
 
@@ -42,7 +42,7 @@ class AppBibliografia extends Component {
             passObra: obra
           }}
         >
-          <img src="./aaa"></img>
+          <img src={img}></img>
           <div className="container-line">
             <div className="container-text">
               {obra.short.map((element, i) => <div key={'fachada-' + i}>{element}</div>)}
@@ -75,7 +75,11 @@ class AppBibliografia extends Component {
       for (var i = 0; i < obras.length; i++) { obras[i] = createObraLink(data[i]); }
       return (
         <div className="row-content">
-          {obras.map(element => <div className="container">{element}</div>)}
+          {obras.map(element => <div className="container"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="0"
+            data-aos-offset="0">{element}</div>)}
         </div>
       );
     }
@@ -101,6 +105,8 @@ class AppBibliografia extends Component {
               <div className="column-content title-row">
                 <div className="title">Cubiertas</div>
               </div>
+              {addObrasLink(cubiertas)}
+              {addObrasRoute(cubiertas)}
               {/*loopIt(5)*/}
               {/*
               <div className="row-content">
