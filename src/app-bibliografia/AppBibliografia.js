@@ -31,9 +31,9 @@ class AppBibliografia extends Component {
     const duration = '1000';
     addAOSAttr(className + ':eq(0)', 'fade-down', duration, '0');
     addAOSAttr(className + ':eq(1)', 'zoom-in', duration, '500');
-    addAOSAttr(className + ':eq(2) .p0', 'fade-left', duration, '500');
-    addAOSAttr(className + ':eq(2) .p1', 'fade-left', duration, '600');
-    addAOSAttr(className + ':eq(2) .p2', 'fade-left', duration, '700');
+    addAOSAttr(className + ':eq(2) .p0', 'fade-right', duration, '500');
+    addAOSAttr(className + ':eq(2) .p1', 'fade-right', duration, '600');
+    addAOSAttr(className + ':eq(2) .p2', 'fade-right', duration, '700');
 
     addAOSAttr(className + ':eq(3) .p0 p:eq(0)', 'fade-up', duration, '500');
     addAOSAttr(className + ':eq(3) .p0 p:eq(1)', 'fade-up', duration, '800');
